@@ -1,0 +1,47 @@
+/* RESET */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    background-color: #ededed;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    box-shadow: 0 0 20px #12121257;
+
+    background-image: url(https://images.pexels.com/photos/1492364/pexels-photo-1492364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+    transform: rotate3d(0);
+    border-radius: 25px;
+
+    transition: 0.3s transform ease-out;
+}
+
+.reflect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+
+    background-image: radial-gradient(circle at 50% -20%, #ffffff4b, #74747413);
+}
+
+.card:hover {
+    transition-duration: 0.2s;
+}
